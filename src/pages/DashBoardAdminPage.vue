@@ -1,6 +1,6 @@
 <template>
     <div>
-        dashabord
+        dashbaord admin
     </div>
 </template>
 

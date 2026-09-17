@@ -1,0 +1,7 @@
+/* estilos q se llaman de forma autoamtica*/
+
+
+body{
+    background-color: var(--color-dark) !important;
+    font-family: "Lobster", sans-serif !important;
+}
