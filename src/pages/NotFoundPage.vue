@@ -1,6 +1,6 @@
 <template>
     <div>
-        Login
+        not found
     </div>
 </template>
 
