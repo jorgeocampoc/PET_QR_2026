@@ -6,12 +6,16 @@ import { AUTH_ROUTES } from "@/constants";
 import type { Role } from "../types/index";
 import routesNotFoundPage from "./notFound.routes";
 import { getPathByRol, isRoleValid } from "@/utils";
+import { routesPet } from "./PetPage";
+import { routesEmail } from "./email.routes";
 
 const routes = [
   ...routesAuth,
   ...routesAdmin,
   ...routesCustomer,
   ...routesNotFoundPage,
+  ...routesPet,
+  ...routesEmail,
   {
     path: "/",
     redirect: "/dashboard",
@@ -28,7 +32,7 @@ router.beforeEach(async (to) => {
   if (to.meta.requiresAuth || to.path == AUTH_ROUTES.auth) {
     await authStore.getUser();
   }
-  
+
   const role = authStore.user?.role || "";
   const isValidRole = isRoleValid(role);
   if (to.path === AUTH_ROUTES.auth) {

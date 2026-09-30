@@ -13,7 +13,7 @@ import {
 } from "@/constants";
 import z from "zod";
 
-const registerSchema = z.object({
+const registerUserSchema = z.object({
   first_name: z
     .string({
       required_error: INPUT_FIRST_NAME_REQUIRED,
@@ -53,4 +53,4 @@ const authSchema = z.object({
     .regex(REGEX_PASSWORD, INPUT_PASSWORD_FORMAT),
 });
 
-export { registerSchema, authSchema };
+export { registerUserSchema, authSchema };

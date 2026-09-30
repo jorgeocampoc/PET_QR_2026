@@ -1,6 +1,6 @@
 const MENU_ITEM_CUSTOMER = {
-  listPets: "Pets List",
-  registerPet: "Register Pet",
+  listPets: "My pets",
+  registerPet: "Register",
 } as const;
 const MENU_ITEM_ADMIN = {
   list: "list",

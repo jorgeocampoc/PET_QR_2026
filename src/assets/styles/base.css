@@ -1,7 +1,9 @@
 /* estilos q se llaman de forma autoamtica*/
 
-
-body{
-    background-color: var(--color-dark) !important;
-    font-family: "Lobster", sans-serif !important;
+body {
+  background-color: var(--color-dark) !important;
+  /* font-family: "Lobster", sans-serif !important; */
+  font-family: "Grandstander", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

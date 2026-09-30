@@ -1,4 +1,5 @@
-import { loginservice } from "@/services";
+import { AUTH_ROUTES } from "@/constants";
+import { loginservice, logoutService } from "@/services";
 import type { AuthSchema } from "@/types";
 import { errorToast, successToast } from "@/utils";
 import { ref } from "vue";
@@ -11,10 +12,23 @@ const useAuth = () => {
     try {
       isLoading.value = true;
       const result = await loginservice(data);
-      console.log(result.path);
-      
       successToast(result.message);
-      router.push({ path: result.path })
+      router.push({ path: result.path });
+    } catch (error) {
+      if (error instanceof Error) {
+        errorToast(error.message);
+      }
+    } finally {
+      isLoading.value = false;
+    }
+  };
+  const logout = async () => {
+    try {
+      isLoading.value = true;
+      const result = await logoutService();
+      successToast(result.message);
+      router.push(AUTH_ROUTES.auth);
+      console.log(AUTH_ROUTES.auth);
     } catch (error) {
       if (error instanceof Error) {
         errorToast(error.message);
@@ -27,6 +41,7 @@ const useAuth = () => {
   return {
     isLoading,
     login,
+    logout,
   };
 };
 
