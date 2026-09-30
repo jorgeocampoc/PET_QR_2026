@@ -5,5 +5,8 @@ const loginResponseSchema = z.object({
   message: z.string(),
   path: z.enum([USER_ROUTES.admin.admin, USER_ROUTES.customer.dashboard]),
 });
+const logoutResponseSchema = z.object({
+  message: z.string(),
+});
 
-export { loginResponseSchema };
+export { loginResponseSchema, logoutResponseSchema };

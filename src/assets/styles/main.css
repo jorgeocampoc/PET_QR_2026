@@ -3,4 +3,5 @@
 @import "./base.css";
 @import "./utilities.css";
 @import "./components.css";
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap');
