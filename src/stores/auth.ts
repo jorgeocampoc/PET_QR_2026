@@ -18,7 +18,6 @@ export const useAuthStore = defineStore("user", () => {
         isAuthenticated.value = true;
       }
     } catch (error) {
-      console.log(error);
       Object.assign(user, INITIAL_USER);
       isAuthenticated.value = false;
     } finally {
@@ -30,6 +29,6 @@ export const useAuthStore = defineStore("user", () => {
     getUser,
     isAuthenticated,
     user,
-    isLoading
+    isLoading,
   };
 });

@@ -16,7 +16,6 @@ const downloadImage = async (file: string) => {
     link.remove();
     URL.revokeObjectURL(url);
   } catch (error) {
-    console.log(error);
     throw new Error("Erroe to donwload the image");
   }
 };

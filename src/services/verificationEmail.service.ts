@@ -9,7 +9,6 @@ const activeAccountUser = async (url: string, token: string) => {
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.log(error.response);
       msg.value = error.response?.data?.message || ERROR_DEFAULT.ERROR_UNKNOWN;
       throw new Error(msg.value);
     }

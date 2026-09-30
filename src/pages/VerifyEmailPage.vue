@@ -38,8 +38,6 @@ onMounted(async () => {
   if (!token.value) return;
   band.value = await activeUser(API_ROUTES_ACCOUNT.BASE_ACCOUNT, token.value);
   if (!band.value) {
-    console.log("entro al log");
-
     router.push("/auth");
   }
 });
