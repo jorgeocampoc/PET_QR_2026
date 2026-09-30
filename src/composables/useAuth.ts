@@ -28,7 +28,6 @@ const useAuth = () => {
       const result = await logoutService();
       successToast(result.message);
       router.push(AUTH_ROUTES.auth);
-      console.log(AUTH_ROUTES.auth);
     } catch (error) {
       if (error instanceof Error) {
         errorToast(error.message);

@@ -37,8 +37,4 @@ input:focus {
   outline: none;
   padding-left: 2rem;
 }
-
-input::placeholder {
-  padding-left: 0.5rem;
-}
 </style>

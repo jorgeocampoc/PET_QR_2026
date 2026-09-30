@@ -35,7 +35,7 @@
           :errorMessage="passwordError"
           placeholder="Password"
         />
-        <FormButtonSend :type="currentForm" :is-loading="isLoading"</FormButtonSend> />
+        <FormButtonSend :type="currentForm" :is-loading="isLoading"</FormButtonSend>
       </div>
     </form>
   </section>

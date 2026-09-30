@@ -33,7 +33,6 @@ const usePet = () => {
       const { results, pagination } = await getAllPetsByUSer(url, page);
       dataPagination.value = pagination;
       data.value = results;
-      console.log(data.value, "fsfsfsa");
     } catch (error) {
       handleErrorToast(error, router);
     } finally {

@@ -63,7 +63,6 @@ defineProps<{
 const emit = defineEmits(["closeModal"]);
 const handleModal = (act: string) => {
   if (!act) return;
-  console.log(act);
 
   emit("closeModal", act);
 };
